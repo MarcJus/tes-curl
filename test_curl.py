@@ -23,7 +23,8 @@ c.setopt(c.HTTPHEADER, ['Accept: application/json,text/plain,*/*',
                         '--compressed'])
 
 f = open("data.json", "r")
-data = json.dumps(f.read())
+data = f.read()
+print(data)
 
 c.setopt(c.POSTFIELDS, data)
 c.setopt(c.WRITEDATA, buffer)
